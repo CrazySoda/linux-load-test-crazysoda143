@@ -1,0 +1,5 @@
+$ ./02_setup_tmpfs.sh
+Mounted tmpfs (256M) at /mnt/bgdsvc_crazysoda143_tmp.
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M     0  256M   0% /mnt/bgdsvc_crazysoda143_tmp
+
