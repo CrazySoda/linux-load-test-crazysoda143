@@ -1,0 +1,34 @@
+$ cat "/etc/logrotate.d/$SVC_NAME"
+/var/log/bgdsvc_crazysoda143/*.log {
+    daily
+    rotate 5
+    compress
+    missingok
+    notifempty
+    size 10M
+    create 0640 bgdsvc_crazysoda143 bgdsvc_crazysoda143
+    su bgdsvc_crazysoda143 bgdsvc_crazysoda143
+}
+
+$ sudo logrotate -f -v "/etc/logrotate.d/$SVC_NAME" 2>&1 | tail -n 15
+old log /var/log/bgdsvc_crazysoda143/monitor.log.5.gz does not exist
+renaming /var/log/bgdsvc_crazysoda143/monitor.log.4.gz to /var/log/bgdsvc_crazysoda143/monitor.log.5.gz (rotatecount 5, logstart 1, i 4), 
+old log /var/log/bgdsvc_crazysoda143/monitor.log.4.gz does not exist
+renaming /var/log/bgdsvc_crazysoda143/monitor.log.3.gz to /var/log/bgdsvc_crazysoda143/monitor.log.4.gz (rotatecount 5, logstart 1, i 3), 
+old log /var/log/bgdsvc_crazysoda143/monitor.log.3.gz does not exist
+renaming /var/log/bgdsvc_crazysoda143/monitor.log.2.gz to /var/log/bgdsvc_crazysoda143/monitor.log.3.gz (rotatecount 5, logstart 1, i 2), 
+old log /var/log/bgdsvc_crazysoda143/monitor.log.2.gz does not exist
+renaming /var/log/bgdsvc_crazysoda143/monitor.log.1.gz to /var/log/bgdsvc_crazysoda143/monitor.log.2.gz (rotatecount 5, logstart 1, i 1), 
+old log /var/log/bgdsvc_crazysoda143/monitor.log.1.gz does not exist
+log /var/log/bgdsvc_crazysoda143/monitor.log.6.gz doesn't exist -- won't try to dispose of it
+renaming /var/log/bgdsvc_crazysoda143/monitor.log to /var/log/bgdsvc_crazysoda143/monitor.log.1
+creating new /var/log/bgdsvc_crazysoda143/monitor.log mode = 0640 uid = 997 gid = 983
+compressing log with: /bin/gzip
+switching uid to 997 and gid to 983 permanently (pid 468482)
+switching euid from 997 to 0 and egid from 983 to 0 (pid 468481)
+
+$ sudo ls -lh "/var/log/$SVC_NAME/"
+total 4.0K
+-rw-r----- 1 bgdsvc_crazysoda143 bgdsvc_crazysoda143   0 Sep 24 15:51 monitor.log
+-rw-rw-r-- 1 bgdsvc_crazysoda143 bgdsvc_crazysoda143 452 Sep 24 15:51 monitor.log.1.gz
+
