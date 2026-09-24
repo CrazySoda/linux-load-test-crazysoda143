@@ -1,0 +1,24 @@
+$ cat /etc/ssh/sshd_config.d/00-${SVC_NAME}.conf
+Port 2222
+PermitRootLogin no
+PasswordAuthentication no
+AllowUsers bgdsvc_crazysoda143
+
+$ sudo sshd -T | grep -E "^(port|permitrootlogin|passwordauthentication|allowusers) "
+port 2222
+permitrootlogin no
+passwordauthentication no
+allowusers bgdsvc_crazysoda143
+
+$ ss -tln | grep -E ":(22|2222) "
+LISTEN 0      4096                       0.0.0.0:2222       0.0.0.0:*          
+LISTEN 0      4096                          [::]:2222          [::]:*          
+
+$ ssh "${SSH_OPTS[@]}" -v -p 2222 "$SVC_NAME"@localhost true 2>&1 | grep -E "Connecting to|Authenticated|not available"
+debug1: Connecting to localhost [127.0.0.1] port 2222.
+Authenticated to localhost ([127.0.0.1]:2222) using "publickey".
+This account is currently not available.
+
+$ ssh "${SSH_OPTS[@]}" -p 22 "$SVC_NAME"@localhost true 2>&1 | tail -n 1   # old port should be refused
+ssh: connect to host localhost port 22: Connection refused
+
