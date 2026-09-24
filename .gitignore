@@ -1,0 +1,7 @@
+# Never commit private SSH keys
+*_key
+id_*
+!*.pub
+
+# Assignment handout
+*.pdf

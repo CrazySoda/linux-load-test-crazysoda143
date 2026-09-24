@@ -1,0 +1,13 @@
+$ ./01_create_user.sh
+User bgdsvc_crazysoda143 already exists — nothing to do.
+uid=997(bgdsvc_crazysoda143) gid=983(bgdsvc_crazysoda143) groups=983(bgdsvc_crazysoda143)
+bgdsvc_crazysoda143:x:997:983::/home/bgdsvc_crazysoda143:/usr/sbin/nologin
+
+$ ./01_create_user.sh
+User bgdsvc_crazysoda143 already exists — nothing to do.
+uid=997(bgdsvc_crazysoda143) gid=983(bgdsvc_crazysoda143) groups=983(bgdsvc_crazysoda143)
+bgdsvc_crazysoda143:x:997:983::/home/bgdsvc_crazysoda143:/usr/sbin/nologin
+
+$ id "$SVC_NAME"
+uid=997(bgdsvc_crazysoda143) gid=983(bgdsvc_crazysoda143) groups=983(bgdsvc_crazysoda143)
+

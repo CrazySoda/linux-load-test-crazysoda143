@@ -1,0 +1,3 @@
+$ echo $SVC_NAME
+bgdsvc_crazysoda143
+
