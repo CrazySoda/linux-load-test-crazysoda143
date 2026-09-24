@@ -1,0 +1,5 @@
+$ ssh "${SSH_OPTS[@]}" -v "$SVC_NAME"@localhost true 2>&1 | grep -E "Authenticated|Connecting to|not available|denied"
+debug1: Connecting to localhost [127.0.0.1] port 22.
+Authenticated to localhost ([127.0.0.1]:22) using "publickey".
+This account is currently not available.
+
