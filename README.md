@@ -2,6 +2,8 @@
 
 BongoDev "A Linux SysAdmin Story". This repo builds a test environment for a new service, puts it under load, secures SSH access to it, automates monitoring, and then removes every trace of it.
 
+**Name:** CrazySoda
+
 **Service account:** `bgdsvc_crazysoda143`
 
 ```
