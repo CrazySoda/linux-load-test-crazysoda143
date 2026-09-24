@@ -1,0 +1,27 @@
+$ sudo crontab -l -u "$SVC_NAME"
+*/5 * * * * /usr/local/bin/bgdsvc_crazysoda143_monitor.sh
+0 2 * * * /usr/local/bin/bgdsvc_crazysoda143_cleanup_old_files.sh
+
+$ sudo tail -n 25 "/var/log/$SVC_NAME/monitor.log"
+---- Thu Sep 24 03:51:59 PM +06 2026 ----
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi       6.7Gi       840Mi       298Mi        16Gi        16Gi
+Swap:          8.0Gi       804Ki       8.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M  256M     0 100% /mnt/bgdsvc_crazysoda143_tmp
+    PID TTY          TIME CMD
+ 467772 ?        00:00:00 systemd
+ 467780 ?        00:00:00 (sd-pam)
+ 467794 ?        00:00:00 pipewire
+ 467795 ?        00:00:00 pipewire
+ 467798 ?        00:00:00 powerline-daemo
+ 467800 ?        00:00:00 user-session-he
+ 467802 ?        00:00:00 wireplumber
+ 467805 ?        00:00:00 pipewire-pulse
+ 467820 ?        00:00:00 dbus-daemon
+ 467903 ?        00:00:00 xdg-document-po
+ 467907 ?        00:00:00 xdg-permission-
+ 468455 pts/2    00:00:00 bgdsvc_crazysod
+ 468459 pts/2    00:00:00 ps
+Thu Sep 24 03:51:59 PM +06 2026: cleanup run — removed files older than 1 day from /mnt/bgdsvc_crazysoda143_tmp
+
