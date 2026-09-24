@@ -1,4 +1,4 @@
-# linux-load-test-arian
+# linux-load-test-crazysoda143
 
 BongoDev "A Linux SysAdmin Story". This repo builds a test environment for a new service, puts it under load, secures SSH access to it, automates monitoring, and then removes every trace of it.
 
