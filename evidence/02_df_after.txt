@@ -1,0 +1,63 @@
+$ ./03_stress_and_populate.sh --disk
+=== Disk: writing 30 x 10M files into a 256M tmpfs ===
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M     0  256M   0% /mnt/bgdsvc_crazysoda143_tmp
+file_1.dat written
+tmpfs           256M   10M  246M   4% /mnt/bgdsvc_crazysoda143_tmp
+file_2.dat written
+tmpfs           256M   20M  236M   8% /mnt/bgdsvc_crazysoda143_tmp
+file_3.dat written
+tmpfs           256M   30M  226M  12% /mnt/bgdsvc_crazysoda143_tmp
+file_4.dat written
+tmpfs           256M   40M  216M  16% /mnt/bgdsvc_crazysoda143_tmp
+file_5.dat written
+tmpfs           256M   50M  206M  20% /mnt/bgdsvc_crazysoda143_tmp
+file_6.dat written
+tmpfs           256M   60M  196M  24% /mnt/bgdsvc_crazysoda143_tmp
+file_7.dat written
+tmpfs           256M   70M  186M  28% /mnt/bgdsvc_crazysoda143_tmp
+file_8.dat written
+tmpfs           256M   80M  176M  32% /mnt/bgdsvc_crazysoda143_tmp
+file_9.dat written
+tmpfs           256M   90M  166M  36% /mnt/bgdsvc_crazysoda143_tmp
+file_10.dat written
+tmpfs           256M  100M  156M  40% /mnt/bgdsvc_crazysoda143_tmp
+file_11.dat written
+tmpfs           256M  110M  146M  43% /mnt/bgdsvc_crazysoda143_tmp
+file_12.dat written
+tmpfs           256M  120M  136M  47% /mnt/bgdsvc_crazysoda143_tmp
+file_13.dat written
+tmpfs           256M  130M  126M  51% /mnt/bgdsvc_crazysoda143_tmp
+file_14.dat written
+tmpfs           256M  140M  116M  55% /mnt/bgdsvc_crazysoda143_tmp
+file_15.dat written
+tmpfs           256M  150M  106M  59% /mnt/bgdsvc_crazysoda143_tmp
+file_16.dat written
+tmpfs           256M  160M   96M  63% /mnt/bgdsvc_crazysoda143_tmp
+file_17.dat written
+tmpfs           256M  170M   86M  67% /mnt/bgdsvc_crazysoda143_tmp
+file_18.dat written
+tmpfs           256M  180M   76M  71% /mnt/bgdsvc_crazysoda143_tmp
+file_19.dat written
+tmpfs           256M  190M   66M  75% /mnt/bgdsvc_crazysoda143_tmp
+file_20.dat written
+tmpfs           256M  200M   56M  79% /mnt/bgdsvc_crazysoda143_tmp
+file_21.dat written
+tmpfs           256M  210M   46M  83% /mnt/bgdsvc_crazysoda143_tmp
+file_22.dat written
+tmpfs           256M  220M   36M  86% /mnt/bgdsvc_crazysoda143_tmp
+file_23.dat written
+tmpfs           256M  230M   26M  90% /mnt/bgdsvc_crazysoda143_tmp
+file_24.dat written
+tmpfs           256M  240M   16M  94% /mnt/bgdsvc_crazysoda143_tmp
+file_25.dat written
+tmpfs           256M  250M  6.0M  98% /mnt/bgdsvc_crazysoda143_tmp
+dd: error writing '/mnt/bgdsvc_crazysoda143_tmp/file_26.dat': No space left on device
+>>> Write of file_26.dat FAILED — tmpfs is full (size cap reached).
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M  256M     0 100% /mnt/bgdsvc_crazysoda143_tmp
+
+$ df -h "/mnt/${SVC_NAME}_tmp"
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M  256M     0 100% /mnt/bgdsvc_crazysoda143_tmp
+

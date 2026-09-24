@@ -1,0 +1,32 @@
+$ ./03_stress_and_populate.sh --cpu
+=== CPU: 2 workers for 30s ===
+stress-ng: info:  [467449] setting to a 30 secs run per stressor
+stress-ng: info:  [467449] dispatching hogs: 2 cpu
+stress-ng: warn:  [467449] WARNING! using HPET clocksource (refer to /sys/devices/system/clocksource/clocksource0), this may impact benchmarking performance
+stress-ng: info:  [467449] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: info:  [467449] note: 16 cpus have scaling governors set to powersave and this can impact on performance; setting /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor to 'performance' may improve performance
+stress-ng: metrc: [467449] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [467449]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [467449] cpu              107870     30.00     60.00      0.00      3595.57        1797.89
+stress-ng: info:  [467449] skipped: 0
+stress-ng: info:  [467449] passed: 2: cpu (2)
+stress-ng: info:  [467449] failed: 0
+stress-ng: info:  [467449] metrics untrustworthy: 0
+stress-ng: info:  [467449] successful run completed in 30.00 secs
+
+$ ./03_stress_and_populate.sh --mem
+=== Memory: 1 VM worker, 200M for 30s ===
+stress-ng: info:  [467495] setting to a 30 secs run per stressor
+stress-ng: info:  [467495] dispatching hogs: 1 vm
+stress-ng: warn:  [467495] WARNING! using HPET clocksource (refer to /sys/devices/system/clocksource/clocksource0), this may impact benchmarking performance
+stress-ng: info:  [467495] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: info:  [467495] note: 16 cpus have scaling governors set to powersave and this can impact on performance; setting /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor to 'performance' may improve performance
+stress-ng: metrc: [467495] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [467495]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [467495] vm              2643629     30.03     21.51      8.51     88027.44       88068.31
+stress-ng: info:  [467495] skipped: 0
+stress-ng: info:  [467495] passed: 1: vm (1)
+stress-ng: info:  [467495] failed: 0
+stress-ng: info:  [467495] metrics untrustworthy: 0
+stress-ng: info:  [467495] successful run completed in 30.03 secs
+

@@ -1,0 +1,27 @@
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi       6.8Gi       654Mi       331Mi        16Gi        16Gi
+Swap:          8.0Gi       804Ki       8.0Gi
+
+$ top -b -n 1 | head -n 20
+top - 15:51:27 up 16:52,  1 user,  load average: 2.39, 1.25, 0.68
+Tasks: 436 total,   6 running, 429 sleeping,   0 stopped,   1 zombie
+%Cpu(s): 17.9 us,  2.2 sy,  0.0 ni, 79.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  23876.9 total,    651.6 free,   6981.8 used,  16666.7 buff/cache     
+MiB Swap:   8192.0 total,   8191.2 free,      0.8 used.  16895.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+ 467542 bgdsvc_+  20   0  265736 166968   1720 R 100.0   0.7   0:12.18 stress-+
+ 467539 bgdsvc_+  20   0   60936   5804   2676 R 100.0   0.0   0:12.18 stress-+
+ 467540 bgdsvc_+  20   0   60936   5804   2676 R 100.0   0.0   0:12.18 stress-+
+   4478 fatin-i+  20   0   53.1g 237332 151636 S   9.1   1.0  11:05.40 vesktop
+      1 root      20   0   24988  15956   9424 S   0.0   0.1   0:06.11 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+

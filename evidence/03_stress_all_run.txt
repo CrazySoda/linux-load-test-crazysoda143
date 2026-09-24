@@ -1,0 +1,102 @@
+----- free -h (before) -----
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi       6.5Gi       984Mi        43Mi        15Gi        16Gi
+Swap:          8.0Gi       804Ki       8.0Gi
+=== CPU: 2 workers for 40s ===
+=== Memory: 1 VM worker, 200M for 40s ===
+=== Disk: writing 30 x 10M files into a 256M tmpfs ===
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M     0  256M   0% /mnt/bgdsvc_crazysoda143_tmp
+stress-ng: info:  [467536] setting to a 40 secs run per stressor
+stress-ng: info:  [467535] setting to a 40 secs run per stressor
+stress-ng: info:  [467536] dispatching hogs: 2 cpu
+stress-ng: warn:  [467536] WARNING! using HPET clocksource (refer to /sys/devices/system/clocksource/clocksource0), this may impact benchmarking performance
+stress-ng: info:  [467536] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: info:  [467536] note: 16 cpus have scaling governors set to powersave and this can impact on performance; setting /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor to 'performance' may improve performance
+stress-ng: info:  [467535] dispatching hogs: 1 vm
+stress-ng: warn:  [467535] WARNING! using HPET clocksource (refer to /sys/devices/system/clocksource/clocksource0), this may impact benchmarking performance
+stress-ng: info:  [467535] note: /proc/sys/kernel/sched_autogroup_enabled is 1 and this can impact scheduling throughput for processes not attached to a tty. Setting this to 0 may improve performance metrics
+stress-ng: info:  [467535] note: 16 cpus have scaling governors set to powersave and this can impact on performance; setting /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor to 'performance' may improve performance
+file_1.dat written
+tmpfs           256M   10M  246M   4% /mnt/bgdsvc_crazysoda143_tmp
+file_2.dat written
+tmpfs           256M   20M  236M   8% /mnt/bgdsvc_crazysoda143_tmp
+file_3.dat written
+tmpfs           256M   30M  226M  12% /mnt/bgdsvc_crazysoda143_tmp
+file_4.dat written
+tmpfs           256M   40M  216M  16% /mnt/bgdsvc_crazysoda143_tmp
+file_5.dat written
+tmpfs           256M   50M  206M  20% /mnt/bgdsvc_crazysoda143_tmp
+file_6.dat written
+tmpfs           256M   60M  196M  24% /mnt/bgdsvc_crazysoda143_tmp
+file_7.dat written
+tmpfs           256M   70M  186M  28% /mnt/bgdsvc_crazysoda143_tmp
+file_8.dat written
+tmpfs           256M   80M  176M  32% /mnt/bgdsvc_crazysoda143_tmp
+file_9.dat written
+tmpfs           256M   90M  166M  36% /mnt/bgdsvc_crazysoda143_tmp
+file_10.dat written
+tmpfs           256M  100M  156M  40% /mnt/bgdsvc_crazysoda143_tmp
+file_11.dat written
+tmpfs           256M  110M  146M  43% /mnt/bgdsvc_crazysoda143_tmp
+file_12.dat written
+tmpfs           256M  120M  136M  47% /mnt/bgdsvc_crazysoda143_tmp
+file_13.dat written
+tmpfs           256M  130M  126M  51% /mnt/bgdsvc_crazysoda143_tmp
+file_14.dat written
+tmpfs           256M  140M  116M  55% /mnt/bgdsvc_crazysoda143_tmp
+file_15.dat written
+tmpfs           256M  150M  106M  59% /mnt/bgdsvc_crazysoda143_tmp
+file_16.dat written
+tmpfs           256M  160M   96M  63% /mnt/bgdsvc_crazysoda143_tmp
+file_17.dat written
+tmpfs           256M  170M   86M  67% /mnt/bgdsvc_crazysoda143_tmp
+file_18.dat written
+tmpfs           256M  180M   76M  71% /mnt/bgdsvc_crazysoda143_tmp
+file_19.dat written
+tmpfs           256M  190M   66M  75% /mnt/bgdsvc_crazysoda143_tmp
+file_20.dat written
+tmpfs           256M  200M   56M  79% /mnt/bgdsvc_crazysoda143_tmp
+file_21.dat written
+tmpfs           256M  210M   46M  83% /mnt/bgdsvc_crazysoda143_tmp
+file_22.dat written
+tmpfs           256M  220M   36M  86% /mnt/bgdsvc_crazysoda143_tmp
+file_23.dat written
+tmpfs           256M  230M   26M  90% /mnt/bgdsvc_crazysoda143_tmp
+file_24.dat written
+tmpfs           256M  240M   16M  94% /mnt/bgdsvc_crazysoda143_tmp
+file_25.dat written
+tmpfs           256M  250M  6.0M  98% /mnt/bgdsvc_crazysoda143_tmp
+dd: error writing '/mnt/bgdsvc_crazysoda143_tmp/file_26.dat': No space left on device
+>>> Write of file_26.dat FAILED — tmpfs is full (size cap reached).
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           256M  256M     0 100% /mnt/bgdsvc_crazysoda143_tmp
+----- free -h (during) -----
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi       6.9Gi       524Mi       331Mi        16Gi        16Gi
+Swap:          8.0Gi       804Ki       8.0Gi
+Tip: in a second terminal run: free -h ; top ; sudo dmesg | grep -i oom
+stress-ng: metrc: [467536] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [467536]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [467536] cpu              140681     40.00     80.00      0.00      3516.97        1758.58
+stress-ng: info:  [467536] skipped: 0
+stress-ng: info:  [467536] passed: 2: cpu (2)
+stress-ng: info:  [467536] failed: 0
+stress-ng: info:  [467536] metrics untrustworthy: 0
+stress-ng: info:  [467536] successful run completed in 40.00 secs
+stress-ng: metrc: [467535] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [467535]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [467535] vm              3583809     40.09     28.77     11.30     89384.29       89425.90
+stress-ng: info:  [467535] skipped: 0
+stress-ng: info:  [467535] passed: 1: vm (1)
+stress-ng: info:  [467535] failed: 0
+stress-ng: info:  [467535] metrics untrustworthy: 0
+stress-ng: info:  [467535] successful run completed in 40.10 secs
+----- free -h (after) -----
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi       6.6Gi       946Mi       298Mi        16Gi        16Gi
+Swap:          8.0Gi       808Ki       8.0Gi
+----- dmesg | grep -i oom -----
+[    2.783426] systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+[    2.903108] systemd[1]: Mounting snap-zoom\x2dclient-275.mount - Mount unit for zoom-client, revision 275...
+[    2.904229] systemd[1]: Mounting snap-zoom\x2dclient-279.mount - Mount unit for zoom-client, revision 279...
