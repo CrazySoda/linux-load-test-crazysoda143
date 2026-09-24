@@ -1,0 +1,58 @@
+$ ./04_cleanup.sh
+
+== 1. Kill processes owned by bgdsvc_crazysoda143 ==
+
+== 2. Remove crontab, logrotate rule, helper scripts, SSH drop-in ==
+
+== 3. Unmount /mnt/bgdsvc_crazysoda143_tmp ==
+
+== 4. Remove /var/log/bgdsvc_crazysoda143 ==
+
+== 5. Delete user bgdsvc_crazysoda143 ==
+
+== Verification ==
+$ id bgdsvc_crazysoda143
+id: ‘bgdsvc_crazysoda143’: no such user
+$ mount | grep bgdsvc_crazysoda143
+(nothing mounted)
+$ ps -u bgdsvc_crazysoda143
+error: user name does not exist
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+
+$ ./04_cleanup.sh
+
+== 1. Kill processes owned by bgdsvc_crazysoda143 ==
+
+== 2. Remove crontab, logrotate rule, helper scripts, SSH drop-in ==
+
+== 3. Unmount /mnt/bgdsvc_crazysoda143_tmp ==
+
+== 4. Remove /var/log/bgdsvc_crazysoda143 ==
+
+== 5. Delete user bgdsvc_crazysoda143 ==
+
+== Verification ==
+$ id bgdsvc_crazysoda143
+id: ‘bgdsvc_crazysoda143’: no such user
+$ mount | grep bgdsvc_crazysoda143
+(nothing mounted)
+$ ps -u bgdsvc_crazysoda143
+error: user name does not exist
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+
